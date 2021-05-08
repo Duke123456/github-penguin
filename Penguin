@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <div id="circle"></div>
+  </body>
+</html>
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:#77dd77;
+}
+div{
+  position:absolute;
+  transform:translate(-50%,-50%);
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  border:2px solid black;
+}
+document.addEventListener('mousemove', function(e) {
+  let body = document.querySelector('body');
+  let circle = document.getElementById('circle');
+  let left = e.offsetX;
+  let top = e.offsetY;
+  circle.style.left = left + 'px';
+  circle.style.top = top + 'px';
+});
